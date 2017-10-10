@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<head>
+  <link rel="stylesheet"
+      href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+</head>
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="text-center">{{title}}</h1>
+    <hr>
+    <div class="alert alert-info">
+        <a class="close" id="content"  data-dismiss="alert" href="#">×</a>Verifica si hoy es tu día de pico y placa
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="name">Placa</label>
+            <input type="text"class="form-control" #myVar  placeholder="N° Placa Auto">
+        </div>
+        <div class="form-group">
+            <label class="control-label">Fecha Actual</label>
+
+              <input type="text" datetime="yyyy-MM-dd HH:mm:ss" #mydate datetimePlaceholder="myDate"
+              class="form-control" placeholder="yyyy-MM-dd HH:mm:ss">
+            <h6 class="text-muted">Formato Fecha:yyyy-MM-dd HH:mm:ss </h6>
+        </div>
+
+        <button type="submit" class="btn btn-success" (click)="comparePlateNum(myVar.value, mydate.value)">Verificar</button>
+    </form>
+  </div>
+</div>
